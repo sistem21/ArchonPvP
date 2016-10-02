@@ -1,0 +1,44 @@
+##########################
+#                        #
+#  +------------------+  #
+#  |     ArchonPvP    |  #
+#  +------------------+  #
+#                        #
+##########################
+
+#puoi trovare i materiali disponibili qui: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+#puoi trovare gli id degli enchants qui: http://minecraft.gamepedia.com/Enchanting/ID
+#puoi trovare i suoni disponibili qui: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+
+items: # !! Quando si configura un item, l'unica sezione indispensabile è quella dell'id; quelle che puoi aggiungere sono enchants, estetic(e le sottosezioni) e amount(di default 1)
+  slot-on-join: 2 #slot in cui ci sarà l'item per il pvp
+  pvp-on: #item da visualizzare quando il pvp è attivo
+    id: DIAMOND_SWORD
+    estetic:
+      displayName: "&7PVP &8» &a&lON"
+  pvp-off: #item da visualizzare quando il pvp è disattivo
+    id: DIAMOND_SWORD
+    estetic: 
+      displayName: "&7PVP &8» &c&lOFF"
+      lore: 
+      - "&7Prendi in mano questo item per attivare il pvp"
+      - ""
+      - "&7Sfida gli altri player!"
+  armor: 
+    boots: 
+      id: DIAMOND_BOOTS
+      enchants: 
+      - "19:2" #il primo è l'id, il secondo il livello
+    leggings: 
+      id: DIAMOND_LEGGINGS
+    chestplate:
+      id: IRON_CHESTPLATE
+    helmet: 
+      id: DIAMOND_HELMET
+messages: #apri e chiudi virgolette per far si che il messaggio non venga mandato. Esempio: pvp-enabled: "" non invierà alcun messaggio.
+  pvp-enabled: "&7Hai &aabilitato &7il pvp" 
+  pvp-disabled: "&7Hai &cdisabilitato &7il pvp"
+  death-message: "" #variabili: {killer} verrà sostituito col nome del killer, {dead} verrà invece sostituito col nome del player morto.
+sounds: #apri e chiudi virgolette per far si che nessun suono venga eseguito. Esempio: pvp-enabled: "" non invierà alcun suono.
+  pvp-enabled: ""
+  pvp-disabled: ""
